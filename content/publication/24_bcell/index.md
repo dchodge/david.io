@@ -36,7 +36,7 @@ image:
   focal_point: "left"
   preview_only: false
 projects:
- - sero
+ - imm_inhost
 slides: ""
 
 ---

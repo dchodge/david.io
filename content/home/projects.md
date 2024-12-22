@@ -26,8 +26,8 @@ subtitle = "Things I'm working"
     tag = "cea"
   
   [[content.filter_button]]
-    name = "Serological analysis"
-    tag = "sero"
+    name = "Immunological dynamics"
+    tag = "imm_dyn"
   
   [[content.filter_button]]
     name = "Bayesian Inference"

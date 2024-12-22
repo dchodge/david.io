@@ -45,7 +45,7 @@ education:
   - course: MSci in Biophysical Sciences
     institution: Durham Univeristy
     year: 2014
-  - course: BSc
+  - course: BSc in Mathematics
     institution: University College London
     year: 2013
 
@@ -83,3 +83,7 @@ user_groups:
 ---
 
 Hi there 👋! I'm a researcher who uses mathematical and statistics to better understand immune responses to infection and vaccination. I work in the [Center of Mathematical modelling of infectious disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) (or CMMID).
+
+What tools to model serological data? Check out [seroanalytics.org](http://seroanalytics.org/) (or [github](https://github.com/seroanalytics))!
+
+Check out my [publications](https://scholar.google.ca/citations?user=d74gCRYAAAAJ&hl=en) and [research outputs](https://www.researchgate.net/profile/David-Hodgson-19)
