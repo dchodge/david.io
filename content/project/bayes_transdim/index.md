@@ -6,7 +6,7 @@ tags:
 date: "2020-04-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: https://dchodge.github.io/rjmc/
+external_link: https://cmmid.github.io/rjmc/
 
 image:
   caption: Photo by ChatGPT
