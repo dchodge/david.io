@@ -14,12 +14,12 @@ btn:
 superuser: true
 
 # Role/position
-role: Research Fellow in infectious disease modelling
+role: Postdoc in infectious disease modelling
 
 # Organizations/Affiliations
 organizations:
-- name: London School of Hygiene and Tropical Medicine
-  url: "https://www.lshtm.ac.uk/aboutus/people/hodgson.david"
+- name: Charté — Universitätsmedizin Berlin
+  url: "https://globalhealth.charite.de/en/metas/person/person/address_detail/dr_david_hodgson"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Research Fellow at London School of Hygiene and Tropical Medicine
@@ -56,7 +56,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:david.hodgson@lshtm.ac.uk'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:david.hodgson@charite.de'  # For a direct email link, use "mailto:test@example.org".
 - icon: bluesky
   icon_pack: bs
   link: https://bsky.app/profile/dchodge.bsky.social
@@ -70,7 +70,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 - icon: cv
   icon_pack: ai
-  link: files/david_hodgson_cv_online.pdf
+  link: files/david_hodgson_cv_full.docx
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -82,7 +82,7 @@ user_groups:
 - Visitors
 ---
 
-Hi there 👋! I'm a researcher who uses mathematics and statistics to better understand immune responses to infection and vaccination. I work in the [Center of Mathematical modelling of infectious disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) (or CMMID).
+Hi there 👋! I'm a researcher who uses mathematics and statistics to better understand immune responses to infection and vaccination. I work in the [Charité Centre for Global Health](https://globalhealth.charite.de/).
 
 What tools to model serological data? Check out [seroanalytics.org](http://seroanalytics.org/) (or [github](https://github.com/seroanalytics))!
 

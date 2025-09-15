@@ -10,11 +10,13 @@ authors:
   - Annette Fox
   - Adam Kucharski
 date: "2024-07-11T00:00:00Z"
-doi: "https://doi.org/10.1101/2024.07.11.24310221"
+doi: "https://doi.org/10.3389/fimmu.2025.1487066"
 publishDate: "2024-07-11T00:00:00Z"
-publication_types: ["3"]
-publication: "Preprint"
-publication_short: "Preprint"
+publication_types: ["2"]
+# Publication name and optional abbreviated publication name.
+publication: In *Frontiers Immunology*
+publication_short: In *Frontiers Immunology*
+
 abstract: |
   Vaccination against COVID-19 has been pivotal in reducing the global burden of the disease. However, Phase III trial results and observational studies underscore differences in efficacy across vaccine technologies and dosing regimens. Notably, mRNA vaccines have exhibited superior effectiveness compared to Adenovirus (AdV) vaccines, especially with extended dosing intervals. Using in-host mechanistic modelling, this study elucidates these variations and unravels the biological mechanisms shaping the immune responses at the cellular level. We used data on the change in memory B cells, plasmablasts, and antibody titres after the second dose of a COVID-19 vaccine for Australian healthcare workers. Alongside this dataset, we constructed a kinetic model of humoral immunity which jointly captured the dynamics of multiple immune markers, and integrated hierarchical effects into this kinetics model, including age, dosing schedule, and vaccine type. Our analysis estimated that mRNA vaccines induced 2.1 times higher memory B cell proliferation than AdV vaccines after adjusting for age, interval between doses, and priming dose. Additionally, extending the duration between the second vaccine dose and priming dose beyond 28 days boosted neutralising antibody production per plasmablast concentration by 30%. We also found that antibody responses after the second dose were more persistent when mRNA vaccines were used over AdV vaccines and for longer dosing regimens. Reconstructing in-host kinetics in response to vaccination could help optimise vaccine dosing regimens, improve vaccine efficacy in different population groups, and inform the design of future vaccines for enhanced protection against emerging pathogens.
 summary: |
@@ -28,7 +30,7 @@ tags:
 featured: true
 links:
   - name: "Full Text"
-    url: "https://doi.org/10.1101/2024.07.11.24310221"
+    url: "https://doi.org/10.3389/fimmu.2025.1487066"
 url_code: 'https://github.com/cmmid/covidbcell'
 
 image:
