@@ -16,7 +16,6 @@ Thumbs.db
 .sass-cache
 npm-debug.log
 builds
-package-lock.json
 public
 resources
 .hugo_build.lock
