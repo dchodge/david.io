@@ -18,11 +18,11 @@ role: Postdoc in infectious disease modelling
 
 # Organizations/Affiliations
 organizations:
-- name: Charté — Universitätsmedizin Berlin
+- name: Charité — Universitätsmedizin Berlin
   url: "https://globalhealth.charite.de/en/metas/person/person/address_detail/dr_david_hodgson"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Research Fellow at London School of Hygiene and Tropical Medicine
+bio: Postdoc at Charité Centre for Global Health 
 
 # Should the user's education and interests be displayed?
 display_education: true
