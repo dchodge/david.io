@@ -44,7 +44,9 @@ It sounds simple, but defining someone as “infected” is not as clear-cut as 
 ## THE TRADITIONAL DEFINITION
 
 [Wikipedia](https://en.wikipedia.org/wiki/Infection), everyone’s favourite textbook, defines infection with something tidy:
-“Infection is the invasion of tissues by pathogens, their multiplication, and the reaction of host tissues to the infectious agent and the toxins they produce.”
+
+*“Infection is the invasion of tissues by pathogens, their multiplication, and the reaction of host tissues to the infectious agent and the toxins they produce.”*
+
 On the surface, this seems clear: a pathogen enters a host, starts multiplying, and the host responds.
 The process typically unfolds in four stages:
 
@@ -86,7 +88,7 @@ Because these are ultimately imperfect tools, statisticians would say infection 
 
 Zoom out to long-term cohort studies, and the challenge deepens. I often work with datasets with only a few blood draws per year, and limited PCR-testing capacity, and infections must be inferred. If antibodies rise, we assume infection. But:
 
-* Some infections barely nudge titres (“serosilent”).
+* Some infections barely nudge titres (abortive infections).
 * Some rises are noise or cross-reactivity.
 * Vaccination can look identical to infection.
 
