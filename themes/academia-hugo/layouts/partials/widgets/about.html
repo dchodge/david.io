@@ -53,8 +53,7 @@
   </div>
   <div class="col-lg-7" itemprop="description">
 
-    <div class="portrait-title">
-      <h2 itemprop="name">{{ "Biography" }}</h2>
+    <div class="portrait-title" style="margin-top: 2rem;">
       {{ with $person.role }}<h3 class="d-inline-block" itemprop="jobTitle">{{ . | markdownify | emojify }},</h3>{{ end }}
 
       {{ range $person.organizations }}

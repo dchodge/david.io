@@ -40,6 +40,9 @@
     <h3 class="article-title mb-1 mt-0" itemprop="name">
       <a href="{{ $item.RelPermalink }}" itemprop="url">{{ $item.Title }}</a>
     </h3>
+    {{ with $item.Params.subtitle }}
+    <h4 class="article-subtitle mb-2 text-muted">{{ . | markdownify | emojify }}</h4>
+    {{ end }}
     {{ if eq $item.Type "talk" }}
     <div class="article-metadata">
       {{ if $item.Params.authors }}

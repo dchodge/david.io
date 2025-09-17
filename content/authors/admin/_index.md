@@ -1,7 +1,6 @@
 ---
 # Display name
 name: David Hodgson
-avatar_image: "user-full.png"
 # Username (this should match the folder name)
 authors:
 - admin
@@ -57,8 +56,8 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'mailto:david.hodgson@charite.de'  # For a direct email link, use "mailto:test@example.org".
-- icon: bluesky
-  icon_pack: bs
+- icon: cloud
+  icon_pack: fas
   link: https://bsky.app/profile/dchodge.bsky.social
 - icon: google-scholar
   icon_pack: ai
@@ -66,11 +65,14 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/dchodge
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/dchodgson/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
-- icon: cv
-  icon_pack: ai
-  link: files/david_hodgson_cv_full.docx
+# - icon: cv
+#   icon_pack: ai
+#   link: files/david_hodgson_cv_full.docx
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -82,8 +84,12 @@ user_groups:
 - Visitors
 ---
 
-Hi there 👋! I'm a researcher who uses mathematics and statistics to better understand immune responses to infection and vaccination. I work in the [Charité Centre for Global Health](https://globalhealth.charite.de/).
+Hi there 👋! 
 
-What tools to model serological data? Check out [seroanalytics.org](http://seroanalytics.org/) (or [github](https://github.com/seroanalytics))!
+I’m a researcher using mathematics and statistics to explore how our immune systems respond to infection and vaccination.
 
-Check out my [publications](https://scholar.google.ca/citations?user=d74gCRYAAAAJ&hl=en) and [research outputs](https://www.researchgate.net/profile/David-Hodgson-19).
+I’m based at the [Charité Centre for Global Health](https://globalhealth.charite.de/), where my work focuses on making sense of serological data and developing better tools for immunological modelling.
+
+If you’re interested in modelling serological data, take a look at [seroanalytics.org](http://seroanalytics.org/) (and the [GitHub](https://github.com/seroanalytics))!
+
+You can also browse my [publications](https://scholar.google.ca/citations?user=d74gCRYAAAAJ&hl=en), [research outputs](https://www.researchgate.net/profile/David-Hodgson-19) and [personal Github](https://github.com/dchodge/).

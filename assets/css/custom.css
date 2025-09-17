@@ -1,0 +1,386 @@
+/* Avenir Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Avenir:wght@300;400;500;600;700&display=swap');
+
+/* Apply Avenir font throughout the site */
+body, 
+h1, h2, h3, h4, h5, h6,
+p, div, span, a, li, td, th,
+.navbar, .card, .btn, .form-control,
+.article-title, .article-subtitle, .article-style,
+.portrait-title, .card-title, .card-text,
+.article-metadata, .pub-icon, .view-list-item {
+  font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Fix subtitle visibility in dark mode */
+.article-subtitle {
+  color: #6c757d !important;
+}
+
+.dark .article-subtitle {
+  color: #a0aec0 !important;
+}
+
+/* Custom font size adjustments */
+
+/* Make main content text smaller */
+.article-container p,
+.article-container li,
+.article-container td,
+.article-container th {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Make blog post content larger for better readability */
+.post-content p,
+.post-content li,
+.post-content td,
+.post-content th,
+.article-container p,
+.article-container li,
+.article-container td,
+.article-container th,
+.article-style p,
+.article-style li,
+.article-style td,
+.article-style th,
+.article-style div,
+.article-style span {
+  font-size: 1.16rem;
+  line-height: 1.7;
+}
+
+/* Target blog post pages specifically */
+.post .article-container p,
+.post .article-container li,
+.post .article-container td,
+.post .article-container th,
+.post .article-style p,
+.post .article-style li,
+.post .article-style td,
+.post .article-style th,
+.post .article-style div,
+.post .article-style span {
+  font-size: 1.16rem;
+  line-height: 1.7;
+}
+
+/* Target all text within article-style specifically for posts */
+.post .article-style * {
+  font-size: 1.16rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Adjust publication content */
+.publication-content p,
+.publication-content li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Make project descriptions smaller */
+.project-content p,
+.project-content li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Adjust abstract text */
+.abstract p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Make navigation text slightly smaller */
+.navbar-light .navbar-nav .nav-link {
+  font-size: 0.95rem;
+}
+
+/* Adjust card text */
+.card-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Make list items smaller */
+ul li, ol li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ===========================================
+   THIN STYLISH BOXES FOR PUBLICATIONS
+   =========================================== */
+
+/* Style the publication list items as thin, stylish boxes */
+.view-list-item {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for the boxes */
+.view-list-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: #007bff;
+}
+
+/* Style the publication icon */
+.view-list-item .pub-icon {
+  color: #007bff;
+  font-size: 1rem;
+  margin-right: 12px;
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+/* Style the publication title */
+.view-list-item a {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 1.4;
+  display: inline-block;
+  width: calc(100% - 40px);
+}
+
+.view-list-item a:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Style the metadata (authors, date) */
+.view-list-item .article-metadata {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #6c757d;
+  line-height: 1.4;
+}
+
+/* Style the button links */
+.view-list-item .btn-links {
+  margin-top: 10px;
+  padding-top: 0;
+}
+
+.view-list-item .btn-links .btn {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+}
+
+/* Add a subtle left border accent */
+.view-list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #007bff, #0056b3);
+  border-radius: 0 2px 2px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .view-list-item {
+    padding: 12px 16px;
+    margin-bottom: 10px;
+  }
+  
+  .view-list-item a {
+    font-size: 0.95rem;
+    width: calc(100% - 35px);
+  }
+  
+  .view-list-item .article-metadata {
+    font-size: 0.8rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .view-list-item {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  .view-list-item a {
+    color: #e2e8f0;
+  }
+  
+  .view-list-item a:hover {
+    color: #63b3ed;
+  }
+  
+  .view-list-item .article-metadata {
+    color: #a0aec0;
+  }
+}
+
+/* ===========================================
+   REMOVE BOXES AROUND BLOG POSTS AND CARDS
+   =========================================== */
+
+/* Remove all styling from card-simple to eliminate boxes */
+.card-simple {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove boxes from regular cards too */
+.card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Remove boxes from project cards */
+.project-card .card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* Remove boxes from publication list items */
+.view-list-item {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Remove the left border accent from publication items */
+.view-list-item::before {
+  display: none !important;
+}
+
+/* ===========================================
+   HIDE BLOG POST PREVIEWS AND CATEGORIES
+   =========================================== */
+
+/* Hide the preview/summary content from blog post cards */
+.card-simple .article-style {
+  display: none !important;
+}
+
+/* Hide categories from blog post cards */
+.card-simple .article-categories {
+  display: none !important;
+}
+
+/* Ensure the card still looks good without the preview */
+.card-simple .card-body {
+  padding-bottom: 1rem;
+}
+
+/* Make sure the title and metadata are properly spaced */
+.card-simple .article-title {
+  margin-bottom: 0.5rem;
+}
+
+.card-simple .article-metadata {
+  margin-bottom: 0;
+}
+
+/* Float left class for images */
+.float-left {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  max-width: 300px;
+  width: 300px;
+}
+
+/* Float right class for images */
+.float-right {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  max-width: 700px;
+  width: 700px;
+}
+
+/* Basic list styling */
+ol, ul {
+  padding-left: 40px;
+  margin-left: 60px;
+}
+
+/* Add extra space for lists that come after floated figures */
+p + ol, p + ul {
+  margin-left: 80px;
+}
+
+/* Ensure proper spacing around floated images */
+figure.float-left, figure.float-right {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* Limit caption width for floated figures */
+figure.float-left figcaption,
+figure.float-right figcaption {
+  max-width: 100%;
+  width: 100%;
+  font-size: 0.3em !important;
+  line-height: 1.2 !important;
+  margin-top: 6px;
+  text-align: center;
+  font-style: italic;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Target all figure captions more broadly */
+figure figcaption {
+  font-size: 0.3em !important;
+  line-height: 1.2 !important;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Very specific targeting for post content */
+.article-container figure figcaption,
+div[itemprop="articleBody"] figure figcaption,
+.post-content figure figcaption {
+  font-size: 0.25em !important;
+  line-height: 1.1 !important;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Target the p tag inside figcaption */
+figure figcaption p {
+  font-size: 4em !important;
+  line-height: 1.3 !important;
+  text-align: center;
+  font-style: italic;
+  margin: 0 !important;
+  padding: 0 !important;
+}
