@@ -64,11 +64,11 @@ But even this leaves questions. Do we call “infection” the moment the first 
 
 Unlike a broken bone, which shows up clean on an X-ray, infection doesn’t come with a crisp signature. There are three main ways researchers define infection:
 
-* Symptom profiles: which correspond to a pathogen
+* Symptom profiles: which are specific to a pathogen
 * PCR testing: which detects genetic fragments of the virus
-* Antibodies change: detected blood shows the immune system responded
+* Antibodies change: analysed blood samples show how the immune system responded
 
-When we conduct big [epidemiological cohort studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC9536647/), we are often interested in answering: how many people are infected? But even this simple question can be murky to answer. Often, cohort studies rely on i) self-reporting of symptoms, ii) PCR testing (virological), and iii) testing blood samples for antibodies (serological). Using all or a subset of these metrics, we establish a pre-emptive "infection case “definition. E.g. when considering PCR, we might consider a single positive sample as “infected”, for bloods, we often use a “four-fold rise” in antibody titre to indicate an infection event. That’s convenient but arbitrary, and it hides the complexities of biology.
+When we conduct big [epidemiological cohort studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC9536647/), we are often interested in answering: how many people are infected? But even this simple question can be murky to answer. Often, cohort studies rely on i) self-reporting of symptoms, ii) PCR testing (virological), and iii) testing blood samples for antibodies (serological). Using all or a subset of these metrics, we establish a pre-emptive "infection case" definition. E.g. when considering PCR, we might consider a single positive sample as “infected”, for bloods, we often use a “four-fold rise” in antibody titre to indicate an infection event. That’s convenient but arbitrary, and it hides the complexities of biology.
 
 ## KNOWING WHAT WE CAN’T SEE
 
