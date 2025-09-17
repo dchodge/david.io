@@ -35,7 +35,7 @@ gallery_item: []
  
 {{< figure src="infection_tarot.png" alt="Infection Tarot Card" width="300" class="float-left" caption="Defining infection is like reading tarot cards - the interpretation depends on who's asking and what they're looking for." >}}
 
-You wake up with a sore throat. You take a lateral flow test—negative. The next day, still negative. A PCR comes back "positive". Meanwhile, your flatmate tested positive on a rapid test but felt fine throughout.
+You wake up with a sore throat. You take a lateral flow test, negative. The next day, still negative. A PCR comes back "positive". Meanwhile, your flatmate tested positive on a rapid test but felt fine throughout.
 
 So who was infected? You, your friend, both, or neither?
 
@@ -50,15 +50,15 @@ It sounds simple, but defining someone as “infected” is not as clear-cut as 
 On the surface, this seems clear: a pathogen enters a host, starts multiplying, and the host responds.
 The process typically unfolds in four stages:
 
-&nbsp;&nbsp;&nbsp;&nbsp;1. Exposure – a pathogen enters via the nose, gut, skin, or another route.
+&nbsp;&nbsp;&nbsp;&nbsp;1. Exposure: a pathogen enters via the nose, gut, skin, or another route.
 
-&nbsp;&nbsp;&nbsp;&nbsp;2. Entry and replication – many are destroyed immediately, but some succeed in infecting cells.
+&nbsp;&nbsp;&nbsp;&nbsp;2. Entry and replication: many are destroyed immediately, but some succeed in infecting cells.
 
-&nbsp;&nbsp;&nbsp;&nbsp;3. Evasion and spread – if replication outpaces early immune defences, the pathogen expands.
+&nbsp;&nbsp;&nbsp;&nbsp;3. Evasion and spread: if replication outpaces early immune defences, the pathogen expands.
 
-&nbsp;&nbsp;&nbsp;&nbsp;4. Host response – symptoms arise both from the pathogen itself and from the immune system's attempts to control it.
+&nbsp;&nbsp;&nbsp;&nbsp;4. Host response: symptoms arise both from the pathogen itself and from the immune system's attempts to control it.
  
-But even this leaves questions. Do we call “infection” the moment the first viral particle sneaks in? How about when replication has taken off? Or only once the host shows symptoms? The traditional definition is helpful, but it leaves blurry edges. Philosophers call this the [Sorites Paradox](https://www.youtube.com/watch?v=y-jexokX3Gk&t=73s). Think about what point a person becomes bald (something I think about a lot in my 30s…). Balding is a continuous process, but baldness as a binary concept is open to interpretation. Infection is a similar continuum — but based on levels of particles, replication, symptoms, shedding, and antibodies instead of precious hair.
+But even this leaves questions. Do we call “infection” the moment the first viral particle sneaks in? How about when replication has taken off? Or only once the host shows symptoms? The traditional definition is helpful, but it leaves blurry edges. Philosophers call this the [Sorites Paradox](https://www.youtube.com/watch?v=y-jexokX3Gk&t=73s). Think about what point a person becomes bald (something I think about a lot in my 30s…). Balding is a continuous process, but baldness as a binary concept is open to interpretation. Infection is a similar continuum, but based on levels of particles, replication, symptoms, shedding, and antibodies instead of precious hair.
 
 ## INFECTION AS A FUZZY CONCEPT IN EPIDEMIOLOGY
 
@@ -79,7 +79,7 @@ All our tools are imperfect windows:
 * Antibody titres fluctuate naturally, and they appear late relative to symptoms, and sometimes not at all.
 * Symptoms often overlap with many other illnesses, particularly for respiratory viruses, and some people never have them.
 
-Because these are ultimately imperfect tools, statisticians would say infection is a latent variable — a hidden state. We never observe it directly; we infer it from noisy signals. That’s not just a technical challenge but a philosophical one: we’re reasoning about something real, but always indirectly.
+Because these are ultimately imperfect tools, statisticians would say infection is a latent variable, a hidden state. We never observe it directly; we infer it from noisy signals. That’s not just a technical challenge but a philosophical one: we’re reasoning about something real, but always indirectly.
 
 {{< figure src="figure_latent.png" alt="Latent Variable Model" width="700" class="float-right" caption="Infection as a latent variable - we never observe it directly, but infer it from noisy signals like PCR tests, symptoms, and antibody responses." >}}
 
@@ -92,7 +92,7 @@ Zoom out to long-term cohort studies, and the challenge deepens. I often work wi
 * Some rises are noise or cross-reactivity.
 * Vaccination can look identical to infection.
 
-This matters for host kinetics — how antibodies rise and fade. If infections are misclassified, estimates of kinetics are distorted.
+This matters for host kinetics (how antibodies rise and fade). If infections are misclassified, estimates of kinetics are distorted.
 
 It also matters for correlates of protection (CoP), the holy grail of vaccine research. To say “an antibody level of X protects against infection,” we need to know who was infected. If infection inference is shaky, CoP estimates are shaky too.
 
@@ -114,8 +114,8 @@ I’ve found it’s best to be upfront and explicit about definitions. That mean
 
 Infection is not a neat binary but a spectrum: exposure, replication, symptoms, shedding, and antibodies. What counts as “infected” depends on whether you care about biology, transmission, immunity, or disease reduction.
 
-To ask “am I infected?” or “how many infections did this vaccine prevent?” is really to ask a bundle of different questions. The answers matter — not just for personal reassurance, but for how we measure immunity, design studies, and protect communities.
+To ask “am I infected?” or “how many infections did this vaccine prevent?” is really to ask a bundle of different questions. The answers matter, not just for personal reassurance, but for how we measure immunity, design studies, and protect communities.
 
-Perhaps infection is best seen not as a single state but as overlapping stories — clinical, epidemiological, immunological. Each is partial, each is useful, and together they shape how we live with pathogens.
+Perhaps infection is best seen not as a single state but as overlapping stories: clinical, epidemiological, immunological. Each is partial, each is useful, and together they shape how we live with pathogens.
 
 ---
