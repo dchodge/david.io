@@ -88,7 +88,7 @@ Because these are ultimately imperfect tools, statisticians would say infection 
 
 Zoom out to long-term cohort studies, and the challenge deepens. I often work with datasets with only a few blood draws per year, and limited PCR-testing capacity, and infections must be inferred. If antibodies rise, we assume infection. But:
 
-* Some infections barely nudge titres (abortive infections).
+* Some infections barely nudge titres.
 * Some rises are noise or cross-reactivity.
 * Vaccination can look identical to infection.
 

@@ -34,8 +34,8 @@ subtitle = ""
     tag = "bayes"
   
   [[content.filter_button]]
-    name = "Other"
-    tag = "other"
+    name = "Widgets"
+    tag = "widgets"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
