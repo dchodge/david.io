@@ -12,8 +12,8 @@ tags:
 - Bayesian inference
 categories:
 - Research
-date: "2025-09-15T00:00:00Z"
-lastmod: "2025-09-15T00:00:00Z"
+date: "2025-09-27T00:00:00Z"
+lastmod: "2025-09-27T00:00:00Z"
 featured: false
 draft: false
 ---
