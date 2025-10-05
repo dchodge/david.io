@@ -11,7 +11,7 @@ tags:
 - infection timing
 - Bayesian inference
 categories:
-- Research
+- Serological Modelling
 date: "2025-09-27T00:00:00Z"
 lastmod: "2025-09-27T00:00:00Z"
 featured: false

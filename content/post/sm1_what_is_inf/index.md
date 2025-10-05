@@ -10,8 +10,8 @@ tags:
 - antibody kinetics
 - infection timing
 - Bayesian inference
-categories: 
-- Research
+categories:
+- Serological Modelling
 date: "2025-09-15T00:00:00Z"
 lastmod: "2025-09-15T00:00:00Z"
 featured: false

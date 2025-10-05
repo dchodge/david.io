@@ -1,0 +1,93 @@
+{{ $item := . }}
+
+{{ $microdata_type := "CreativeWork" }}
+{{ $show_buttons := false }}
+
+{{/* Dynamic view adjusts to content type. */}}
+{{ if eq $item.Type "post" }}
+{{ $microdata_type = "BlogPosting" }}
+{{ else if eq $item.Type "talk" }}
+{{ $microdata_type = "Event" }}
+{{ $show_buttons = true }}
+{{ else if eq $item.Type "publication" }}
+{{ $microdata_type = "ScholarlyArticle" }}
+{{ $show_buttons = true }}
+{{ end }}
+
+{{/* Get summary. */}}
+{{ $summary := "" }}
+{{ if $item.Params.summary }}
+{{ $summary = $item.Params.summary | markdownify | emojify }}
+{{ else if .Params.abstract }}
+{{ $summary = .Params.abstract | markdownify | emojify }}
+{{ else if $item.Truncated }}
+{{ $summary = $item.Summary }}
+{{ else }}
+{{ $summary = $item.Content }}
+{{ end }}
+
+<div class="card-simple" itemscope itemtype="http://schema.org/{{$microdata_type}}">
+    {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ $anchor := $item.Params.image.focal_point | default "Center" }}
+    {{ with $resource }}
+    {{ $image := .Fill (printf "918x517 q90 %s" $anchor) }}
+    <a href="{{ $item.RelPermalink }}">
+      <img src="{{ $image.RelPermalink }}" class="article-banner" itemprop="image" alt="">
+    </a>
+    {{end}}
+
+    <div class="card-body">
+    <h3 class="article-title mb-1 mt-0" itemprop="name">
+      <a href="{{ $item.RelPermalink }}" itemprop="url">{{ $item.Title }}</a>
+    </h3>
+    {{ with $item.Params.subtitle }}
+    <h4 class="article-subtitle mb-2 text-muted">{{ . | markdownify | emojify }}</h4>
+    {{ end }}
+    {{ if eq $item.Type "talk" }}
+    <div class="article-metadata">
+      {{ if $item.Params.authors }}
+      <div class="article-authors">
+        {{ range $i, $author := $item.Params.authors }}
+          {{ if $i }}, {{ end }}
+          {{ $author }}
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ if $item.Params.event }}
+      <div class="article-event">{{ $item.Params.event }}</div>
+      {{ end }}
+      {{ if $item.Params.location }}
+      <div class="article-location">{{ $item.Params.location }}</div>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ if eq $item.Type "publication" }}
+    <div class="article-metadata">
+      {{ if $item.Params.authors }}
+      <div class="article-authors">
+        {{ range $i, $author := $item.Params.authors }}
+          {{ if $i }}, {{ end }}
+          {{ $author }}
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ if $item.Params.publication }}
+      <div class="article-publication">{{ $item.Params.publication }}</div>
+      {{ end }}
+      {{ if $item.Params.publication_short }}
+      <div class="article-publication-short">{{ $item.Params.publication_short }}</div>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ if $summary }}
+    <div class="article-style" itemprop="articleBody">
+      {{ $summary }}
+    </div>
+    {{ end }}
+    {{ if $show_buttons }}
+    <div class="btn-links">
+      {{ partial "page_links" (dict "page" $item "is_list" 0) }}
+    </div>
+    {{ end }}
+  </div>
+</div>

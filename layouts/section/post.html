@@ -1,0 +1,84 @@
+{{- define "main" -}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      {{ partial "page_header.html" . }}
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      
+      {{/* Group posts by category */}}
+      {{ $categories := slice }}
+      {{ range .Pages }}
+        {{ range .Params.categories }}
+          {{ $categories = $categories | append . }}
+        {{ end }}
+      {{ end }}
+      {{ $categories = $categories | uniq | sort }}
+      
+      {{/* Display posts grouped by category */}}
+      {{ range $categories }}
+        {{ $category := . }}
+        {{ $posts := where $.Pages "Params.categories" "intersect" (slice $category) }}
+        
+        {{ if gt (len $posts) 0 }}
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-heading">{{ $category }}</h2>
+            <div class="row">
+              {{ range $posts }}
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="card h-100">
+                    {{ if .Params.featured_image }}
+                      {{ $featured := .Resources.GetMatch .Params.featured_image }}
+                      {{ if $featured }}
+                        {{ $resized := $featured.Fill "400x200 Center" }}
+                        <img class="card-img-top" src="{{ $resized.RelPermalink }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+                      {{ else }}
+                        <img class="card-img-top" src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+                      {{ end }}
+                    {{ else if .Params.image }}
+                      {{ $image := .Resources.GetMatch .Params.image }}
+                      {{ if $image }}
+                        {{ $resized := $image.Fill "400x200 Center" }}
+                        <img class="card-img-top" src="{{ $resized.RelPermalink }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+                      {{ else }}
+                        <img class="card-img-top" src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+                      {{ end }}
+                    {{ else }}
+                      {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+                      {{ if $featured }}
+                        {{ $resized := $featured.Fill "400x200 Center" }}
+                        <img class="card-img-top" src="{{ $resized.RelPermalink }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+                      {{ end }}
+                    {{ end }}
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        <a href="{{ .RelPermalink }}" class="text-dark">{{ .Title }}</a>
+                      </h5>
+                      {{ if .Params.subtitle }}
+                        <p class="card-text text-muted">{{ .Params.subtitle }}</p>
+                      {{ end }}
+                    </div>
+                    <div class="card-footer bg-transparent">
+                      <small class="text-muted">{{ .Date.Format "January 2, 2006" }}</small>
+                    </div>
+                  </div>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      {{ end }}
+      
+    </div>
+  </div>
+</div>
+
+{{- end -}}
