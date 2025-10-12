@@ -6,7 +6,7 @@ tags:
 date: "2025-09-30T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: https://dchodge.github.io/rjmc-widget-mixture/
+external_link: https://rjmcmixture.davidhodgson.me
 
 image:
   caption: Mixture Model Widget

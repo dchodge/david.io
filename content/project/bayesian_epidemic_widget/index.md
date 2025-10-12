@@ -6,7 +6,7 @@ tags:
 date: "2024-01-15T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: http://widget-bayesian-sir.davidhodgson.me/
+external_link: http://bayesvac.davidhodgson.me/
 
 image:
   caption: Interactive Bayesian Epidemic Modelling Widget
