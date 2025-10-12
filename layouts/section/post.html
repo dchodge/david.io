@@ -43,12 +43,29 @@
                         <img class="card-img-top" src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
                       {{ end }}
                     {{ else if .Params.image }}
-                      {{ $image := .Resources.GetMatch .Params.image }}
-                      {{ if $image }}
-                        {{ $resized := $image.Fill "400x200 Center" }}
-                        <img class="card-img-top" src="{{ $resized.RelPermalink }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+                      {{ $image_path := "" }}
+                      {{ $focal_point := "Center" }}
+                      {{ if reflect.IsMap .Params.image }}
+                        {{ $image_path = .Params.image.src | default "" }}
+                        {{ $focal_point = .Params.image.focal_point | default "Center" }}
                       {{ else }}
-                        <img class="card-img-top" src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+                        {{ $image_path = .Params.image }}
+                      {{ end }}
+                      {{ if $image_path }}
+                        {{ $image := .Resources.GetMatch $image_path }}
+                        {{ if $image }}
+                          {{ $resized := $image.Fill (printf "400x200 %s" $focal_point) }}
+                          <img class="card-img-top" src="{{ $resized.RelPermalink }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+                        {{ else }}
+                          <img class="card-img-top" src="{{ $image_path | relURL }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+                        {{ end }}
+                      {{ else }}
+                        {{/* If image is a map but no src, try to find featured image with focal point */}}
+                        {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+                        {{ if $featured }}
+                          {{ $resized := $featured.Fill (printf "400x200 %s" $focal_point) }}
+                          <img class="card-img-top" src="{{ $resized.RelPermalink }}" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+                        {{ end }}
                       {{ end }}
                     {{ else }}
                       {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}

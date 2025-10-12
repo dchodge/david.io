@@ -28,7 +28,12 @@
 
 <div class="card-simple" itemscope itemtype="http://schema.org/{{$microdata_type}}">
     {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
-    {{ $anchor := $item.Params.image.focal_point | default "Center" }}
+    {{ $anchor := "Center" }}
+    {{ if $item.Params.image }}
+      {{ if reflect.IsMap $item.Params.image }}
+        {{ $anchor = $item.Params.image.focal_point | default "Center" }}
+      {{ end }}
+    {{ end }}
     {{ with $resource }}
     {{ $image := .Fill (printf "918x517 q90 %s" $anchor) }}
     <a href="{{ $item.RelPermalink }}">

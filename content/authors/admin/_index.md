@@ -68,6 +68,9 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/dchodgson/
+- icon: rss
+  icon_pack: fas
+  link: https://themindfulresearcher.substack.com/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv
@@ -83,13 +86,12 @@ user_groups:
 - Researchers
 - Visitors
 ---
-
-Hi there 👋! 
+Hi there 👋!
 
 I’m a researcher using mathematics and statistics to explore how our immune systems respond to infection and vaccination.
 
 I’m based at the [Charité Centre for Global Health](https://globalhealth.charite.de/), where my work focuses on making sense of serological data and developing better tools for immunological modelling.
 
-If you’re interested in modelling serological data, take a look at [seroanalytics.org](http://seroanalytics.org/) (and the [GitHub](https://github.com/seroanalytics))!
-
-You can also browse my [publications](https://scholar.google.ca/citations?user=d74gCRYAAAAJ&hl=en), [research outputs](https://www.researchgate.net/profile/David-Hodgson-19) and [personal Github](https://github.com/dchodge/).
+* *Interested in my academic research?* You can browse my this website, or my [publications](https://scholar.google.ca/citations?user=d74gCRYAAAAJ&hl=en), [research outputs](https://www.researchgate.net/profile/David-Hodgson-19) and [personal Github](https://github.com/dchodge/).
+* *Interested in modelling serological data?* Take a look at [seroanalytics.org](http://seroanalytics.org/) (and the [GitHub](https://github.com/seroanalytics))!
+* *Interested in my less academic writings?* Checkout my [substack](https://themindfulresearcher.substack.com/).
