@@ -1,5 +1,5 @@
 ---
-title: "FROM THEORY TO PRACTICE: HOW CORRELATES OF PROTECTION ACTUALLY LICENSE VACCINES"
+title: "THE SHORTCUT TO VACCINE APPROVALS: WHEN BLOOD TESTS REPLACE CLINICAL TRIALS"
 subtitle: "A journey through history's successes (and stumbles)"
 summary: ""
 authors:
@@ -17,7 +17,7 @@ lastmod: "2025-10-12T00:00:00Z"
 featured: false
 draft: false
 ---
-After my [Part 1 on COP terminology](https://www.davidhodgson.me/post/sm3_cop1/), let's get practical. How have correlates of protection actually been used to license vaccines? What can we learn from both the successes and failures? And what does this mean for the next pandemic or the next vaccine waiting in the pipeline?
+After my [Part 1 on correlate of protection terminology](https://www.davidhodgson.me/post/sm3_cop1/), let's get practical. How have correlates of protection actually been used to license vaccines? What can we learn from both the successes and failures? And what does this mean for the next pandemic or the next vaccine waiting in the pipeline?
 
 ## The early days: stumbling toward success
 
@@ -27,7 +27,7 @@ The breakthrough came when scientists realised they could *standardise* this obs
 
 ### Smallpox: a retrospective correlate
 
-Smallpox vaccination provides our earliest example. Researchers in the 1960s and 70s, during the final push for eradication, observed, retrospectively, that vaccinia antibody levels correlated with protection against smallpox. This wasn't used for licensing (the vaccine was already widely deployed), but it helped answer a crucial question: had someone been successfully vaccinated?
+Smallpox vaccination provides an early example. Researchers in the 1960s and 70s, during the final push for eradication, observed, retrospectively, that vaccinia antibody levels correlated with protection against smallpox. This wasn't used for licensing (the vaccine was already widely deployed), but it helped answer a crucial question: had someone been successfully vaccinated?
 
 The vaccinia-neutralising antibody response became an informal correlate, used to assess take rates and guide revaccination strategies. It wasn't rigorous by modern standards, but it worked. The disease was eradicated in 1980, and those early observations laid groundwork for thinking systematically about immune markers and protection.
 
@@ -85,7 +85,7 @@ The HPV story also illustrates an important concept: correlates need not be perf
 
 The chikungunya vaccine story showcases both the promise and peril of approving vaccines based on correlates alone. In November 2023, the FDA approved IXCHIQ (VLA1553), the first chikungunya vaccine, using an accelerated pathway based entirely on immunological correlates—no traditional efficacy trial required. Here's why this was innovative: chikungunya outbreaks are unpredictable and transient, making traditional Phase 3 efficacy trials practically impossible.
 
- So researchers established a surrogate endpoint based on animal models. In non-human primates, neutralising antibody titers (measured by micro-plaque reduction neutralization test, μPRNT50) above 150 prevented viremia after viral challenge. A sero-epidemiological study in the Philippines provided supporting evidence: people with neutralising titers above a certain threshold showed 100% protection from symptomatic infection. The FDA accepted μPRNT50 ≥150 as the surrogate endpoint for protection. In the pivotal trial, 98.9% of vaccinated participants achieved seroprotective titers. 
+ So researchers established a surrogate endpoint based on animal models. In non-human primates, neutralising antibody titers (measured by micro-plaque reduction neutralization test, μPRNT50) above 150 prevented viremia after viral challenge. A sero-epidemiological study in the Philippines provided supporting evidence: people with neutralising titers above a certain threshold showed 100% protection from symptomatic infection. The FDA accepted μPRNT50 ≥150 as the surrogate endpoint for protection. In the pivotal trial, 98.9% of vaccinated participants achieved seroprotective titers.
 
 This looked like a triumph—a vaccine approved in record time based on validated immune correlates, potentially preventing millions of cases of debilitating arthritis. But then reality struck. In May 2025, less than 18 months after approval, the FDA and CDC recommended pausing IXCHIQ use in people over 60 following reports of serious adverse events including cardiac and neurologic complications. As of August 2025, the FDA suspended the vaccine's license entirely after reports of severe chikungunya-like illness in vaccinated people—including 21 hospitalisations, 3 deaths, and one death from encephalitis directly attributed to the vaccine strain.
 
@@ -153,13 +153,13 @@ Edward Jenner would be amazed. Not only do we understand *why* vaccines work, bu
 
 ## Further Reading
 
-**Hepatitis B coP:**
+**Hepatitis B:**
 
 * Szmuness, W., Stevens, C.E., Harley, E.J., Zang, E.A., Oleszko, W.R., William, D.C., Sadovsky, R., Morrison, J.M., & Kellner, A. (1980). Hepatitis B vaccine: Demonstration of efficacy in a controlled clinical trial in a high-risk population in the United States.  *New England Journal of Medicine* , 303(15), 833-841.
 * McAleer, W.J., Buynak, E.B., Maigetter, R.Z., Wampler, D.E., Miller, W.J., & Hilleman, M.R. (1984). Human hepatitis B vaccine from recombinant yeast.  *Nature* , 307, 178-180.
 * André, F.E. (1989). Summary of safety and efficacy data on a yeast-derived hepatitis B vaccine.  *The American Journal of Medicine* , 87(3A), 14S-20S.
 
-**Measles CoP**
+**Measles**
 
 * Chen, R.T., Markowitz, L.E., Albrecht, P., Stewart, J.A., Mofenson, L.M., Preblud, S.R., & Orenstein, W.A. (1990). Measles antibody: reevaluation of protective titers.  *Journal of Infectious Diseases* , 162(5), 1036-1042.
 * Nolan, T., Bernstein, D.I., Block, S.L., et al. (2020). Immunogenicity and Safety of a Measles-Mumps-Rubella Vaccine Administered as a First Dose to Children Aged 12 to 15 Months: A Phase III, Randomized, Noninferiority, Lot-to-Lot Consistency Study.  *Journal of the Pediatric Infectious Diseases Society* , 9(2), 194-203.
@@ -177,7 +177,7 @@ Edward Jenner would be amazed. Not only do we understand *why* vaccines work, bu
 * Joura, E.A., et al. (2015). A 9-valent HPV vaccine against infection and intraepithelial neoplasia in women.  *New England Journal of Medicine* , 372(8), 711-723.
 * Schiller, J.T., & Lowy, D.R. (2012). Understanding and learning from the success of prophylactic human papillomavirus vaccines.  *Nature Reviews Microbiology* , 10(10), 681-692.
 
-**Chikingunya**
+**Chikungunya**
 
 * Chen LH, Fritzer A, Hochreiter R, Dubischar K, Meyer S. From bench to clinic: the development of VLA1553/IXCHIQ, a live-attenuated chikungunya vaccine. *J Travel Med.* 2024;31(7):taae123. doi:10.1093/jtm/taae123
 * Weber WC, Streblow DN, Coffey LL. Chikungunya Virus Vaccines: A Review of IXCHIQ and PXVX0317 from Pre-Clinical Evaluation to Licensure. *BioDrugs.* 2024;38(6):727-742. doi:10.1007/s40259-024-00677-y
