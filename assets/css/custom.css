@@ -31,3 +31,67 @@
 .dark .card:hover {
   border-color: #007bff !important;
 }
+
+/* Horizontal scrolling for talk cards */
+.talk-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+  margin-bottom: 1rem;
+}
+
+.talk-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.talk-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.talk-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.talk-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.talk-scroll-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding-bottom: 0.5rem;
+  min-width: min-content;
+}
+
+.talk-card-item {
+  flex: 0 0 auto;
+  width: 350px;
+  max-width: 350px;
+}
+
+.talk-card-item .card {
+  height: 100%;
+  margin-bottom: 0;
+}
+
+/* Dark mode scrollbar */
+.dark .talk-scroll-container {
+  scrollbar-color: #666 #2d3748;
+}
+
+.dark .talk-scroll-container::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+.dark .talk-scroll-container::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+.dark .talk-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}

@@ -1,0 +1,103 @@
+{{- define "main" -}}
+
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+
+      {{ with .Content }}
+      <div class="article-style" itemprop="articleBody">{{ . }}</div>
+      {{ end }}
+
+      {{/* Group talks by talk_type, defaulting missing ones to "Selected talks" */}}
+      {{ $allPages := .Data.Pages }}
+      {{ $plenaryInvitedTalks := slice }}
+      {{ $selectTalks := slice }}
+      {{ $seminars := slice }}
+      {{ $otherTalks := dict }}
+      
+      {{ range $allPages }}
+        {{ $talkType := .Params.talk_type | default "Selected talks" }}
+        {{ if or (eq $talkType "Plenary talks") (eq $talkType "Invited Talks") (eq $talkType "Plenary/Invited talks") }}
+          {{ $plenaryInvitedTalks = $plenaryInvitedTalks | append . }}
+        {{ else if eq $talkType "Selected talks" }}
+          {{ $selectTalks = $selectTalks | append . }}
+        {{ else if eq $talkType "Seminars" }}
+          {{ $seminars = $seminars | append . }}
+        {{ else }}
+          {{ $existing := index $otherTalks $talkType | default (slice) }}
+          {{ $existing = $existing | append . }}
+          {{ $otherTalks = merge $otherTalks (dict $talkType $existing) }}
+        {{ end }}
+      {{ end }}
+
+      {{/* Display Plenary and Invited Talks combined */}}
+      {{ if $plenaryInvitedTalks }}
+        <div class="mb-5">
+          <h2 class="mb-4">Plenary and Invited Talks</h2>
+          <div class="talk-scroll-container">
+            <div class="talk-scroll-wrapper">
+              {{ range $plenaryInvitedTalks }}
+                <div class="talk-card-item">
+                  {{ partial "li_card" . }}
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+
+      {{/* Display Selected talks */}}
+      {{ if $selectTalks }}
+        <div class="mb-5">
+          <h2 class="mb-4">Selected talks</h2>
+          <div class="talk-scroll-container">
+            <div class="talk-scroll-wrapper">
+              {{ range $selectTalks }}
+                <div class="talk-card-item">
+                  {{ partial "li_card" . }}
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+
+      {{/* Display Seminars */}}
+      {{ if $seminars }}
+        <div class="mb-5">
+          <h2 class="mb-4">Seminars</h2>
+          <div class="talk-scroll-container">
+            <div class="talk-scroll-wrapper">
+              {{ range $seminars }}
+                <div class="talk-card-item">
+                  {{ partial "li_card" . }}
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+
+      {{/* Display any other categories */}}
+      {{ range $talkType, $pages := $otherTalks }}
+        <div class="mb-5">
+          <h2 class="mb-4">{{ $talkType }}</h2>
+          <div class="talk-scroll-container">
+            <div class="talk-scroll-wrapper">
+              {{ range $pages }}
+                <div class="talk-card-item">
+                  {{ partial "li_card" . }}
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>
+
+{{- end -}}
