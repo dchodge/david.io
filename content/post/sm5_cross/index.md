@@ -1,5 +1,5 @@
 ---
-title: "WHAT CAN I INFER FROM SEROLOGICAL DATA?"
+title: "WHAT CAN I INFER FROM CROSS-SECTIONAL SEROLOGICAL DATA?"
 subtitle: "A Practical Primer"
 summary: ""
 authors:
@@ -139,3 +139,4 @@ The examples above, from COVID-19's iceberg effect in Ischgl to Spain's nationwi
 Yet serological data is only as good as our ability to interpret it correctly. Understanding the nuances of antibody testing, accounting for waning immunity over time, and properly modelling age-stratified patterns are all essential for extracting reliable insights. As we continue to refine these methods and expand their application, cross-sectional serology will remain an indispensable tool for bridging the gap between what we observe and what is truly happening in our populations.
 
 The next time you see a case count, remember: the true story is likely much larger, and serology helps us read between the lines.
+
