@@ -34,6 +34,10 @@ subtitle = ""
     tag = "bayes"
   
   [[content.filter_button]]
+    name = "Phylodynamics"
+    tag = "phylo"
+  
+  [[content.filter_button]]
     name = "Widgets"
     tag = "widgets"
 
