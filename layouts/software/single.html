@@ -1,0 +1,46 @@
+{{- define "main" -}}
+{{/* Software & Tools page. Data lives in content/software/index.md */}}
+<div class="universal-wrapper pt-3 sw-page">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.intro }}<p class="sw-intro">{{ . | markdownify }}</p>{{ end }}
+
+  {{ range .Params.groups }}
+  <section class="sw-group">
+    <h2 class="sw-group-title">{{ .name }}</h2>
+
+    {{ if .compact }}
+    <ul class="sw-compact">
+      {{ range .tools }}
+      <li>
+        <code>{{ .name }}</code>
+        <span class="sw-compact-pitch">{{ .pitch }}</span>
+        <span class="sw-compact-links">
+          {{ with .github }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{{ end }}
+          {{ with .paper }}<a href="{{ . | relURL }}"><i class="fas fa-scroll" aria-hidden="true"></i> Paper</a>{{ end }}
+        </span>
+      </li>
+      {{ end }}
+    </ul>
+    {{ else }}
+    <div class="sw-grid">
+      {{ range .tools }}
+      <article class="sw-card">
+        <header class="sw-card-head">
+          <h3 class="sw-name">{{ .name }}</h3>
+          {{ with .lang }}<span class="sw-lang">{{ . }}</span>{{ end }}
+        </header>
+        <p class="sw-pitch">{{ .pitch }}</p>
+        <div class="sw-links">
+          {{ with .try }}<a class="btn btn-primary sw-try" href="{{ . }}" target="_blank" rel="noopener">▶ Try it</a>{{ end }}
+          {{ with .docs }}<a class="btn btn-outline-primary" href="{{ . }}" target="_blank" rel="noopener">Docs</a>{{ end }}
+          {{ with .github }}<a class="btn btn-outline-primary" href="{{ . }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>{{ end }}
+          {{ with .paper }}<a class="btn btn-outline-primary" href="{{ . | relURL }}">Paper</a>{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    {{ end }}
+  </section>
+  {{ end }}
+</div>
+{{- end -}}

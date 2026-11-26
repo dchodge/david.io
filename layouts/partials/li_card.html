@@ -76,11 +76,9 @@
         {{ end }}
       </div>
       {{ end }}
-      {{ if $item.Params.publication }}
-      <div class="article-publication">{{ $item.Params.publication }}</div>
-      {{ end }}
-      {{ if $item.Params.publication_short }}
-      <div class="article-publication-short">{{ $item.Params.publication_short }}</div>
+      {{/* Show the journal once, rendered as markdown so *italics* don't appear as literal asterisks */}}
+      {{ with $item.Params.publication | default $item.Params.publication_short }}
+      <div class="article-publication">{{ . | markdownify }}</div>
       {{ end }}
     </div>
     {{ end }}

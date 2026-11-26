@@ -1,0 +1,19 @@
+{{/* Research themes strip. Data lives in content/home/themes.md */}}
+{{ $p := .page.Params }}
+{{ $pubs := where site.RegularPages "Type" "publication" }}
+
+{{ with $p.heading }}<h2 class="rt-heading">{{ . }}</h2>{{ end }}
+<div class="rt-grid">
+  {{ range $p.items }}
+  {{ $n := len (where $pubs ".Params.projects" "intersect" .projects) }}
+  <a class="rt-card" href="{{ .link | relURL }}">
+    <i class="{{ .icon }} rt-icon" aria-hidden="true"></i>
+    <span class="rt-name">{{ .name }}</span>
+    <span class="rt-blurb">{{ .blurb }}</span>
+    <span class="rt-foot">
+      {{ if gt $n 0 }}<span class="rt-count">{{ $n }} paper{{ if ne $n 1 }}s{{ end }}</span>{{ end }}
+      <span class="rt-go">{{ .link_label | default "Explore" }} ▸</span>
+    </span>
+  </a>
+  {{ end }}
+</div>

@@ -21,8 +21,8 @@ publishDate: "2026-03-03T00:00:00Z"
 # 7 = Thesis; 8 = Patent
 publication_types: ["2"]
 
-publication: In *BMC Medicine*
-publication_short: In *BMC Med*
+publication: "*BMC Medicine*"
+publication_short: "*BMC Med*"
 
 abstract: |
   **Background**: Respiratory syncytial virus (RSV) causes recurrent infections throughout life. Yet, the form and durability of antibody-mediated protection induced by infection remained poorly understood.

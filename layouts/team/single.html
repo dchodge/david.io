@@ -1,0 +1,51 @@
+{{/* Team page. Data lives in content/team/index.md */}}
+{{- define "partials/team-initials" -}}{{ $parts := split (replace . "Dr " "") " " }}{{ range first 2 $parts }}{{ substr . 0 1 }}{{ end }}{{- end -}}
+
+{{- define "main" -}}
+
+<div class="universal-wrapper pt-3 tm-page">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.intro }}<p class="sw-intro">{{ . | markdownify }}</p>{{ end }}
+
+  {{ with .Params.current }}
+  <section class="sw-group">
+    <h2 class="sw-group-title">Current team</h2>
+    <div class="tm-grid">
+      {{ range . }}
+      <article class="tm-card">
+        <div class="tm-avatar">
+          {{ with .photo }}<img src="{{ printf "img/%s" . | relURL }}" alt="">{{ else }}<span>{{ partial "team-initials" .name }}</span>{{ end }}
+        </div>
+        <div class="tm-body">
+          <h3 class="tm-name">{{ .name }}</h3>
+          <div class="tm-role">{{ .role }} · {{ .years }}</div>
+          {{ with .funding }}<div class="tm-funding">{{ . }}</div>{{ end }}
+          {{ with .project }}<p class="tm-project">{{ . }}</p>{{ end }}
+          {{ with .outputs }}
+          <ul class="tm-outputs">
+            {{ range . }}<li>{{ if .url }}<a href="{{ .url | relURL }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</li>{{ end }}
+          </ul>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with .Params.alumni }}
+  <section class="sw-group">
+    <h2 class="sw-group-title">Past members &amp; students</h2>
+    <ul class="tm-alumni">
+      {{ range . }}
+      <li>
+        <span class="tm-alumni-name">{{ .name }}</span>
+        <span class="tm-alumni-role">{{ .role }} · {{ .years }}{{ with .note }} · {{ . }}{{ end }}</span>
+        {{ range .outputs }}{{ if .url }}<a class="tm-alumni-out" href="{{ .url | relURL }}">{{ .title }}</a>{{ else }}<span class="tm-alumni-out">{{ .title }}</span>{{ end }}{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+</div>
+{{- end -}}

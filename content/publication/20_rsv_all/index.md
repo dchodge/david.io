@@ -6,11 +6,11 @@ authors:
 - Jasmina Panovska-Griffiths
 - Marc Baguelin
 - Katherine E. Atkins
-date: "2023-01-01T00:00:00Z"
+date: "2020-11-18T00:00:00Z"
 doi: "https://doi.org/10.1186/s12916-020-01802-8"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2023-01-15T00:00:00Z"
+publishDate: "2020-11-18T00:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -20,8 +20,8 @@ publication_types: ["2"]
 
 
 # Publication name and optional abbreviated publication name.
-publication: In *Journal of Infectious Disease Modelling*
-publication_short: In *JIDM*
+publication: "*BMC Medicine*"
+publication_short: "*BMC Med*"
 
 abstract: |
   Background: With a suite of promising new RSV prophylactics on the horizon, including long-acting monoclonal antibodies and new vaccines, it is likely that one or more of these will replace the current monoclonal Palivizumab programme. However, choosing the optimal intervention programme will require balancing the costs of the programmes with the health benefits accrued.

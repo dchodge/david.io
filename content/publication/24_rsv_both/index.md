@@ -22,8 +22,8 @@ publishDate: "2023-12-01T00:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *Lancet Europe*
-publication_short: In *Lancet Europe*
+publication: "*The Lancet Regional Health – Europe*"
+publication_short: "*Lancet Reg Health Eur*"
 
 abstract: |
   Background Two new products for preventing Respiratory Syncytial Virus (RSV) in young children have been licensed: a single-dose long-acting monoclonal antibody (la-mAB) and a maternal vaccine (MV). To facilitate the selection of new RSV intervention programmes for large-scale implementation, this study provides an assessment to compare the costs of potential programmes with the health benefits accrued.
