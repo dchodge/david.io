@@ -1,0 +1,46 @@
+{{/* Research -> Policy section. Data lives in content/home/policy.md */}}
+{{ $p := .page.Params }}
+
+<div class="row justify-content-center"><div class="col-12 section-heading text-center"><h1>{{ $p.heading }}</h1></div></div>
+{{ with $p.intro }}<p class="pp-intro">{{ . }}</p>{{ end }}
+
+<div class="pp-cols">
+  <section>
+    <h3 class="pc-h">Advisory roles</h3>
+    <ul class="pp-committees">
+      {{ range $p.committees }}
+      <li class="pp-committee">
+        <span class="pp-short">{{ .short }}</span>
+        <span class="pp-body">
+          <strong>{{ .name }}</strong>, {{ .country }}
+          <small>{{ .years }} · {{ .meetings }} meeting{{ if ne .meetings 1 }}s{{ end }} · {{ .detail }}</small>
+        </span>
+      </li>
+      {{ end }}
+    </ul>
+    {{ with $p.roster }}<p class="pp-roster"><i class="fas fa-globe" aria-hidden="true"></i> {{ . }}</p>{{ end }}
+  </section>
+
+  <section>
+    <h3 class="pc-h">From papers to policy</h3>
+    <ol class="pp-flow">
+      {{ range $p.evidence }}
+      {{ with site.GetPage (printf "/publication/%s" .) }}
+      <li class="pp-paper">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <small>{{ .Params.publication_short | default .Params.publication | replaceRE `^In |\*` "" }}, {{ .Date.Year }}</small>
+      </li>
+      {{ end }}
+      {{ end }}
+    </ol>
+    <div class="pp-arrow" aria-hidden="true">▼</div>
+    {{ with $p.outcome }}
+    <a class="pp-outcome" href="{{ .link }}" target="_blank" rel="noopener">
+      <span class="pp-outcome-date">{{ .date }}</span>
+      <strong>{{ .title }}</strong>
+      <span>{{ .text }}</span>
+      <span class="pp-outcome-go">Read the statement ▸</span>
+    </a>
+    {{ end }}
+  </section>
+</div>

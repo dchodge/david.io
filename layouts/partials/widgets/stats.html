@@ -1,0 +1,111 @@
+{{/* Player Card widget: compact stats bar + full profile panel (native <dialog>). Data lives in content/home/stats.md */}}
+{{ $p := .page.Params }}
+{{ $years := sub now.Year (int $p.phd_year) }}
+{{ $posts := len (where site.RegularPages "Type" "post") }}
+{{ $projects := len (where site.RegularPages "Type" "project") }}
+{{ $pct := div (mul (float $p.first_author) 100) (float $p.papers) }}
+
+<div class="pc-bar">
+  <div class="pc-bar-label">Player stats</div>
+  <div class="pc-tiles">
+    <div class="pc-tile"><span class="pc-num">{{ $years }}</span><span class="pc-cap">yrs since PhD</span></div>
+    <div class="pc-tile"><span class="pc-num">{{ $p.papers }}</span><span class="pc-cap">papers</span></div>
+    <div class="pc-tile"><span class="pc-num">{{ $p.citations }}</span><span class="pc-cap">citations</span></div>
+    <div class="pc-tile"><span class="pc-num">{{ $p.h_index }}</span><span class="pc-cap">h-index</span></div>
+  </div>
+  <button type="button" class="btn pc-open" data-pc-open>▶ Open profile</button>
+</div>
+
+<dialog class="pc-dialog" id="player-card" aria-labelledby="pc-name">
+  <div class="pc-panel">
+    <button type="button" class="pc-close" data-pc-close aria-label="Close profile">✕</button>
+
+    <header class="pc-plate">
+      <div class="pc-name" id="pc-name">{{ $p.name }}</div>
+      <div class="pc-sub">{{ $p.class }} · {{ $p.guild }}</div>
+      <div class="pc-sub">PhD {{ $p.phd_year }} · {{ $years }} years post-PhD</div>
+    </header>
+
+    <div class="pc-headline">
+      <div><span class="pc-num">{{ $p.h_index }}</span><span class="pc-cap">h-index</span></div>
+      <div><span class="pc-num">{{ $p.citations }}</span><span class="pc-cap">citations</span></div>
+      <div><span class="pc-num">{{ $p.papers }}</span><span class="pc-cap">papers</span></div>
+      <div><span class="pc-num">{{ $posts }}</span><span class="pc-cap">blog posts</span></div>
+      <div><span class="pc-num">{{ $projects }}</span><span class="pc-cap">projects</span></div>
+    </div>
+
+    <div class="pc-meter">
+      <div class="pc-meter-top">
+        <span>First-author completion</span>
+        <span>{{ $p.first_author }}/{{ $p.papers }} · {{ lang.FormatNumber 1 $pct }}%</span>
+      </div>
+      <div class="pc-meter-track"><div class="pc-meter-fill" style="width: {{ $pct }}%"></div></div>
+    </div>
+
+    <div class="pc-cols">
+      <section>
+        <h3 class="pc-h">Stats</h3>
+        <ul class="pc-stats">
+          {{ range $p.stats }}
+          <li>
+            <i class="{{ .icon }}" aria-hidden="true"></i>
+            <span class="pc-stat-label">{{ .label }}{{ with .note }}<small>{{ . }}</small>{{ end }}</span>
+            <span class="pc-stat-val">{{ .value }}</span>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section>
+        <h3 class="pc-h">Career path</h3>
+        <ol class="pc-path">
+          {{ range $p.career }}
+          <li><span class="pc-year">{{ .year }}</span><span>{{ .what }}<small>{{ .where }}</small></span></li>
+          {{ end }}
+        </ol>
+
+        <h3 class="pc-h">Achievements</h3>
+        <ul class="pc-badges">
+          {{ range $p.badges }}
+          {{ if .unlocked }}
+          <li class="pc-badge" title="{{ .name }}: {{ .detail }}">
+            <i class="{{ .icon }}" aria-hidden="true"></i>
+            <span>{{ .name }}</span>
+            <small>{{ .detail }}</small>
+          </li>
+          {{ else }}
+          <li class="pc-badge is-locked" title="Locked: {{ .name }}">
+            <i class="fas fa-lock" aria-hidden="true"></i>
+            <span>{{ .name }}</span>
+            <small>locked</small>
+          </li>
+          {{ end }}
+          {{ end }}
+        </ul>
+      </section>
+    </div>
+
+    <footer class="pc-foot">
+      Citations &amp; h-index from <a href="{{ $p.scholar_url }}" target="_blank" rel="noopener">Google Scholar</a>, {{ $p.stats_date }}.
+    </footer>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var dlg = document.getElementById('player-card');
+  if (!dlg) return;
+  var openBtn = document.querySelector('[data-pc-open]');
+  function open() {
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+    document.body.classList.add('pc-lock');
+  }
+  function close() {
+    if (typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open');
+  }
+  openBtn && openBtn.addEventListener('click', open);
+  dlg.querySelector('[data-pc-close]').addEventListener('click', close);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });  // click backdrop
+  dlg.addEventListener('close', function () { document.body.classList.remove('pc-lock'); });
+})();
+</script>

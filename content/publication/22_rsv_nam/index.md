@@ -20,8 +20,8 @@ publishDate: "2022-11-22T00:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *Vaccine*
-publication_short: In *Vaccine*
+publication: "*Vaccine*"
+publication_short: "*Vaccine*"
 
 abstract: |
   Introduction: Respiratory Syncytial Virus (RSV) is a major cause of acute lower respiratory tract infections (ALRI) in infants. There are no licensed vaccines and only one monoclonal antibody available to protect infants from disease. A new and potentially longer-lasting monoclonal antibody, Nirsevimab, showed promising results in phase IIb/III trials. We evaluate the cost-effectiveness of Nirsevimab intervention programmes in England and Wales.

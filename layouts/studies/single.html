@@ -1,0 +1,30 @@
+{{- define "main" -}}
+{{/* Studies & Cohorts page. Data lives in content/studies/index.md */}}
+<div class="universal-wrapper pt-3 sw-page">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.intro }}<p class="sw-intro">{{ . | markdownify }}</p>{{ end }}
+
+  <div class="st-list">
+    {{ range .Params.cohorts }}
+    <article class="st-card">
+      <header class="st-head">
+        <h2 class="st-name">{{ .name }}</h2>
+        <span class="st-meta"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ .place }} · {{ .design }}</span>
+      </header>
+      <p class="st-blurb">{{ .blurb }}</p>
+      <ul class="st-papers">
+        {{ range .papers }}
+        {{ with site.GetPage (printf "/publication/%s" .) }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <small>{{ .Params.publication_short | default .Params.publication | replaceRE `^In |\*` "" }}, {{ .Date.Year }}</small>
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
+      {{ with .tag }}<a class="st-tag" href="{{ printf "/tag/%s/" (urlize (lower .)) | relURL }}">All {{ . }} outputs ▸</a>{{ end }}
+    </article>
+    {{ end }}
+  </div>
+</div>
+{{- end -}}

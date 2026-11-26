@@ -42,7 +42,7 @@ education:
     institution: University College London
     year: 2015
   - course: MSci in Biophysical Sciences
-    institution: Durham Univeristy
+    institution: Durham University
     year: 2014
   - course: BSc in Mathematics
     institution: University College London
@@ -92,6 +92,6 @@ I’m a researcher using mathematics and statistics to explore how our immune sy
 
 I’m based at the [Charité Centre for Global Health](https://globalhealth.charite.de/), where my work focuses on making sense of serological data and developing better tools for immunological modelling.
 
-* *Interested in my academic research?* You can browse my this website, or my [publications](https://scholar.google.ca/citations?user=d74gCRYAAAAJ&hl=en), [research outputs](https://www.researchgate.net/profile/David-Hodgson-19) and [personal Github](https://github.com/dchodge/).
+* *Interested in my academic research?* You can browse this website, or my [publications](https://scholar.google.ca/citations?user=d74gCRYAAAAJ&hl=en), [research outputs](https://www.researchgate.net/profile/David-Hodgson-19) and [personal Github](https://github.com/dchodge/).
 * *Interested in modelling serological data?* Take a look at [seroanalytics.org](http://seroanalytics.org/) (and the [GitHub](https://github.com/seroanalytics))!
 * *Interested in my less academic writings?* Checkout my [substack](https://themindfulresearcher.substack.com/).

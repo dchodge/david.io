@@ -8,25 +8,50 @@
   url = "#about"
   weight = 10
 
+# "Research" dropdown: Projects, Software, Studies
 [[main]]
-  name = "Projects"
-  url = "#projects"
+  name = "Research"
+  identifier = "research"
+  url = "#"
   weight = 20
 
 [[main]]
-  name = "Blog Posts"
-  url = "post/"
-  weight = 30
+  parent = "research"
+  name = "Projects"
+  url = "/#projects"
+  weight = 1
+
+[[main]]
+  parent = "research"
+  name = "Software"
+  url = "software/"
+  weight = 2
+
+[[main]]
+  parent = "research"
+  name = "Studies"
+  url = "studies/"
+  weight = 3
 
 [[main]]
   name = "Publications"
   url = "publication/"
-  weight = 40
+  weight = 30
 
 [[main]]
   name = "Talks"
   url = "talk/"
+  weight = 40
+
+[[main]]
+  name = "Blog Posts"
+  url = "post/"
   weight = 50
+
+[[main]]
+  name = "Team"
+  url = "team/"
+  weight = 60
 
 #[[main]]
 #  name = "Contact"

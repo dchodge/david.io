@@ -21,8 +21,8 @@ publishDate: "2017-03-01T00:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *The Lancet Public Health*
-publication_short: In *Lancet Public Health*
+publication: "*The Lancet Public Health*"
+publication_short: "*Lancet Public Health*"
 
 abstract: |
   Background: In 2013 England and Wales began to fund a live attenuated influenza vaccine programme for individuals aged 2-16 years. Mathematical modelling predicts substantial beneficial herd effects for the entire population as a result of reduced influenza transmission. With a decreased influenza-associated disease burden, existing immunisation programmes might be less cost-effective. The aim of this study was to assess the epidemiological effect and cost-effectiveness of the existing elderly and risk group vaccination programme under the new policy of mass paediatric vaccination in England.

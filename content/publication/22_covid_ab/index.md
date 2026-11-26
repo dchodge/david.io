@@ -25,7 +25,7 @@ authors:
 - Thushan I. de Silva
 - Paul J. Collini
 date: "2022-05-24T00:00:00Z"
-doi: "10.1093/medrxiv.2021.07.08"
+doi: "10.12688/wellcomeopenres.17143.2"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2022-06-01T00:00:00Z"
@@ -37,8 +37,8 @@ publishDate: "2022-06-01T00:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *PMC*
-publication_short: In *PMC*
+publication: "*Wellcome Open Research*"
+publication_short: "*Wellcome Open Res*"
 
 abstract: |
   Background: We aimed to measure SARS-CoV-2 seroprevalence in a cohort of healthcare workers (HCWs) during the first UK wave of the COVID-19 pandemic, explore risk factors associated with infection, and investigate the impact of antibody titres on assay sensitivity.
@@ -63,7 +63,7 @@ featured: false
 
 links:
   - name: "Full Text"
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9091808/"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9091808/"
 url_pdf: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9091808/"
 url_code:  "https://github.com/cmmid/hero-study"
 # url_dataset: '#'
